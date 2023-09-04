@@ -7,15 +7,11 @@
   <!-- Specify some standard inertial calculations https://en.wikipedia.org/wiki/List_of_moments_of_inertia -->
   <!-- These make use of xacro's mathematical functionality -->
   <link name="world"/>
-  <material name="gray">
-    <color rgba="0.6 0.8 0.8 1"/>
-  </material>
   <link name="visuals_link">
     <visual>
       <geometry>
         <mesh filename="package://ur_workcell_description/meshes/Assembly_new.STL" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="gray"/>
     </visual>
   </link>
   <link name="shield_front_link">
@@ -24,7 +20,6 @@
       <geometry>
         <box size="1.44 0.03 1.16"/>
       </geometry>
-      <material name="gray"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -38,7 +33,6 @@
       <geometry>
         <box size="1.44 0.03 1.16"/>
       </geometry>
-      <material name="gray"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -52,7 +46,6 @@
       <geometry>
         <box size="0.03 0.94 1.16"/>
       </geometry>
-      <material name="gray"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -66,7 +59,6 @@
       <geometry>
         <box size="0.03 0.94 1.16"/>
       </geometry>
-      <material name="gray"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -80,7 +72,6 @@
       <geometry>
         <box size="1.44 0.94 0.99"/>
       </geometry>
-      <material name="gray"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
