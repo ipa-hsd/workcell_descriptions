@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="prbt_flange">
+    <xacro:macro name="prbt_flange" params="name prefix">
+
+        <xacro:property name="base_diameter" value="0.065" />
+        <xacro:property name="base_height" value="0.015" />
+
+         <!--Base plate-->
+        <link name="${prefix}prbt_flange_link">
+            <visual>
+                <geometry>
+                    <mesh filename="package://prbt_flange_description/meshes/flange_v3.STL" scale="0.001 0.001 0.001" />
+                </geometry>
+                <origin rpy="${pi} 0 0" xyz="-${base_diameter/2} ${base_diameter/2} ${base_height}" />
+            </visual>
+            <collision>
+                <geometry>
+                    <mesh filename="package://prbt_flange_description/meshes/flange_v3.STL" scale="0.001 0.001 0.001" />
+                </geometry>
+                <origin rpy="${pi} 0 0" xyz="-${base_diameter/2} ${base_diameter/2} ${base_height}" />
+            </collision>
+        </link>
+    </xacro:macro>
+</robot>
