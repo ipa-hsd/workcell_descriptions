@@ -6,7 +6,6 @@
 <robot name="ur5e_workcell">
   <!-- Specify some standard inertial calculations https://en.wikipedia.org/wiki/List_of_moments_of_inertia -->
   <!-- These make use of xacro's mathematical functionality -->
-  <link name="world"/>
   <link name="visuals_link">
     <visual>
       <geometry>
@@ -104,11 +103,6 @@
     <parent link="robotcell_base_link"/>
     <child link="shield_right_link"/>
     <origin rpy="0 0 0" xyz="0.705 0 1.5699999999999998"/>
-  </joint>
-  <joint name="robot_cell_base_joint" type="fixed">
-    <parent link="world"/>
-    <child link="robotcell_base_link"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
   <joint name="robot_cell_base_to_robot_link" type="fixed">
     <parent link="robotcell_base_link"/>
